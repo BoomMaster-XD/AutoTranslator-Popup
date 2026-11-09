@@ -1,0 +1,26 @@
+{
+	"manifest_version": 3,
+	"name": "AutoTranslator Popup",
+	"version": "1.0",
+	"description": "Traduce de forma rapida el texto seleccionado en una ventana emergente",
+	"action": {
+		"default_popup": "popup.html",
+		"default_icon": "icon.png"
+	},
+	"permissions": [
+		"activeTab",
+		"storage"
+	],
+	"content_scripts": [
+    	{
+      		"matches": ["<all_urls>"],
+      		"js": ["content.js"]
+    	}
+	],
+	"web_accessible_resources": [
+		{
+			"resources": ["icon.png"],
+			"matches": ["<all_urls>"]
+		}
+	]
+}
